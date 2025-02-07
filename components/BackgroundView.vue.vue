@@ -25,7 +25,7 @@ const icons = [
   { img: "https://static-00.iconduck.com/assets.00/node-js-icon-1817x2048-g8tzf91e.png", name: "NodeJS" },
   { img: "https://img.icons8.com/color/512/express-js.png", name: "ExpressJS" },
   { img: "https://static-00.iconduck.com/assets.00/postgresql-icon-1987x2048-v2fkmdaw.png", name: "Postgres" },
-  { img: "https://static-00.iconduck.com/assets.00/mongodb-icon-2048x2048-wn3ad6uo.png", name: "MongoDB" },
+  { img: "https://www.svgrepo.com/show/331488/mongodb.svg", name: "MongoDB" },
   { img: "https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png", name: "Firebase" },
   { img: "https://static-00.iconduck.com/assets.00/prisma-icon-424x512-q3326vpv.png", name: "Prisma" }
 ];
@@ -53,8 +53,8 @@ const randomPosition = (index) => {
 
 .icon {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   opacity: 0.2;
   animation: floatUp infinite linear;
 }
@@ -65,7 +65,6 @@ const randomPosition = (index) => {
   object-fit: contain;
 }
 
-/* Animation */
 @keyframes floatUp {
   from {
     transform: translateY(100vh) scale(0.5);

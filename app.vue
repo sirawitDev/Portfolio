@@ -10,3 +10,13 @@ import { NuxtPage } from '#components';
     <NuxtPage />
   </div>
 </template>
+
+<style>
+* {
+  font-family: 'Prompt', sans-serif;
+}
+
+.text-stroke {
+    text-shadow: -5px -1px 0 #ff9c56, 1px -1px 0 #ff9c56, -5px 1px 0 #ff9c56, 1px 1px 0 #ff9c56;
+}
+</style>

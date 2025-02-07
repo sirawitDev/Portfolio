@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden pt-5 pb-5 relative" :class="{'dark-mode': themeStore.isDarkMode}">
-    <div class="flex">
+    <div class="flex ">
       <div class="flex gap-5 animate-scroll">
         <div
           v-for="(item, index) in doubledData"
@@ -40,9 +40,11 @@ const data = [
   { img: 'https://img.icons8.com/color/512/express-js.png', name: "ExpressJS" },
   { img: 'https://static-00.iconduck.com/assets.00/database-mysql-icon-1849x2048-81vgyimd.png', name: "MySQL" },
   { img: 'https://static-00.iconduck.com/assets.00/postgresql-icon-1987x2048-v2fkmdaw.png', name: "Postgres" },
-  { img: 'https://static-00.iconduck.com/assets.00/mongodb-icon-2048x2048-wn3ad6uo.png', name: "MongoDB" },
+  { img: 'https://www.svgrepo.com/show/331488/mongodb.svg', name: "MongoDB" },
   { img: 'https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png', name: "Firebase" },
-  { img: 'https://static-00.iconduck.com/assets.00/prisma-icon-424x512-q3326vpv.png', name: "Prisma" }
+  { img: 'https://static-00.iconduck.com/assets.00/prisma-icon-424x512-q3326vpv.png', name: "Prisma" },
+  { img: 'https://cdn.iconscout.com/icon/free/png-256/free-postman-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945092.png?f=webp&w=256', name: "Postman" },
+  { img: 'https://cdn-icons-png.flaticon.com/512/25/25231.png', name: "Github" }
 ]
 
 const doubledData = computed(() => [...data, ...data])

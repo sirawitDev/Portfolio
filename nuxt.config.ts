@@ -11,7 +11,14 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  modules: [
-    '@pinia/nuxt',
-  ],
+  modules: ['@pinia/nuxt', '@nuxtjs/google-fonts',],
+  googleFonts: {
+    families: {
+      Sarabun: [400, 500, 600, 700],
+      Inter: [400, 500, 600, 700],
+      Kanit: [400, 500, 600, 700],
+      Prompt: [400, 500, 600, 700],
+    },
+    display: 'swap',
+  },
 })
