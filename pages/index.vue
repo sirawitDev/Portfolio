@@ -1,35 +1,25 @@
 <template>
   <layoutsView>
-    <div class="">
+    <div class="fade-in" >
       <Profile />
     </div>
 
-    <div class=" mt-32">
-      <div class="divider"></div>
+    <div class="slide-up mt-24">
+      <div class="divider animate-pulse"></div>
       <techSkill />
-      <div class="divider"></div>
+      <div class="divider animate-pulse"></div>
     </div>
 
-    <div id="about-section" class="mt-16">
-      <div class="flex justify-center">
-        <p class="text-5xl font-semibold">Profile</p>
-      </div>
+    <div class="scroll-down-icon absolute bottom-8 left-[50%] cursor-pointer" @click="scrollToEducation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-chevron-down" :class="arrowClass">
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </div>
 
-      <div class="flex justify-center mb-10 mt-10">
-
-        <div class="flex-1">
-          <div class="flex justify-center">
-            <p class="text-2xl font-semibold">Education</p>
-          </div>
-          <Education class="mt-5" />
-        </div>
-        <div class="flex-1">
-          <div class="flex justify-center">
-            <p class="text-2xl font-semibold">ประวัติส่วนตัว</p>
-          </div>
-        </div>
-
-      </div>
+    <div ref="educationSection">
+      <Education />
     </div>
   </layoutsView>
 </template>
@@ -39,6 +29,69 @@ import layoutsView from '~/layouts/layoutsView.vue';
 import techSkill from '~/components/techSkill.vue';
 import Profile from '~/components/Profile.vue';
 import Education from '~/components/Education.vue';
-import BackgroundViewVue from '~/components/BackgroundView.vue.vue';
+import { useThemeStore } from '#imports';
 
+const themeStore = useThemeStore();
+
+const educationSection = ref(null);
+
+const scrollToEducation = () => {
+  if (educationSection.value) {
+    educationSection.value.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
+
+const arrowClass = computed(() => themeStore.isDarkMode ? 'text-green-500' : 'text-gray-500');
 </script>
+
+<style scoped>
+.scroll-down-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+.slide-up {
+  animation: slide-up 1s ease-out;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text {
+  background-size: 300%;
+  animation: gradient 3s ease infinite;
+}
+</style>
