@@ -1,6 +1,6 @@
 <template>
   <div class="relative" >
-    <div class="max-w-5xl mx-auto mt-28 px-4">
+    <div class="max-w-5xl mx-auto mt-16 sm:mt-28 px-4">
       <div class="flex flex-col-reverse md:flex-row gap-4 h-auto md:h-96" :class="{ 'md:flex-row-reverse': isFlipped }">
 
         <div class="flex-1 flex flex-col justify-center items-center"
