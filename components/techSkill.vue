@@ -30,7 +30,7 @@ const data = [
   { img: 'https://icons.iconarchive.com/icons/cornmanthe3rd/plex/512/Other-html-5-icon.png', name: "HTML5" },
   { img: 'https://img.icons8.com/fluent/512/css3.png', name: "CSS" },
   { img: 'https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png', name: "Javascript" },
-  { img: 'https://static-00.iconduck.com/assets.00/sql-database-generic-icon-1521x2048-d0vdpxpg.png', name: "MySQL" },
+  { img: 'https://static-00.iconduck.com/assets.00/sql-database-generic-icon-1521x2048-d0vdpxpg.png', name: "MySQLs" },
   { img: 'https://static-00.iconduck.com/assets.00/vue-icon-2048x1766-ntogpmti.png', name: "VueJS" },
   { img: 'https://static-00.iconduck.com/assets.00/nuxt-icon-icon-2048x1520-wbh7ctgr.png', name: "NuxtJS" },
   { img: 'https://cdn.iconscout.com/icon/free/png-256/free-react-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-freebies-pack-logos-icons-1175109.png?f=webp&w=256', name: "ReactJS" },

@@ -10,20 +10,20 @@
         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
           <li><a @click.prevent="scrollToHome">{{ languageStore.t('home') }}</a></li>
           <li><a @click.prevent="scrollToAbout">{{ languageStore.t('about') }}</a></li>
-          <li><a>{{ languageStore.t('project') }}</a></li>
+          <li><a @click.prevent="scrollToProject">{{ languageStore.t('project') }}</a></li>
         </ul>
       </div>
       <a class="btn btn-ghost text-xl">{{ languageStore.t('portfolio') }}</a>
     </div>
     <div class="navbar-center hidden lg:flex">
-      <ul class="flex gap-3">
+      <ul class="flex gap-10">
         <li>
           <a class=" cursor-pointer" @click.prevent="scrollToHome">{{ languageStore.t('home') }}</a>
         </li>
         <li>
           <a class="cursor-pointer" @click.prevent="scrollToAbout">{{ languageStore.t('about') }}</a>
         </li>
-        <li><a>{{ languageStore.t('project') }}</a></li>
+        <li><a @click.prevent="scrollToProject">{{ languageStore.t('project') }}</a></li>
       </ul>
     </div>
     <div class="navbar-end">
@@ -64,6 +64,13 @@ function scrollToAbout() {
   const aboutSection = document.getElementById('about-section');
   if (aboutSection) {
     aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function scrollToProject() {
+  const projectSection = document.getElementById('project-section');
+  if (projectSection) {
+    projectSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
