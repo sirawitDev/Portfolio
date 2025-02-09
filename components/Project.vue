@@ -58,14 +58,14 @@
               </button>
             </div>
 
-            <div class="flex justify-center mt-5 gap-5">
+            <div class="flex justify-center mt-5 gap-2 sm:gap-5">
               <button
                 class="btn bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-300">
                 {{ languageStore.t('more') }}
               </button>
 
               <button @click="visitWebsite(project.link)"
-                class="btn bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-300">
+                class="btn bg-gray-500 text-white px-2 sm:px-4 py-2 rounded-lg hover:bg-gray-700 transition-all duration-300">
                 {{ languageStore.t('visitwebsite') }}
               </button>
             </div>

@@ -4,7 +4,7 @@
       @click="toggleDropdown"
       class="flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-300"
     >
-      <span>{{ languageNames[currentLang] }}</span>
+      <span class="text-sm">{{ languageNames[currentLang] }}</span>
       <svg 
         class="w-4 h-4"
         fill="none"
