@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <div class="p-0 sm:p-4">
     <label class="swap swap-rotate">
       <input type="checkbox" class="theme-controller" :checked="isDarkMode" @change="toggleTheme" />
       <svg class="swap-off h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

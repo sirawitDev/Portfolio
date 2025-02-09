@@ -10,7 +10,7 @@
       <div class="divider animate-pulse"></div>
     </div>
 
-    <div class="scroll-down-icon absolute bottom-8 left-[50%] cursor-pointer" @click="scrollToEducation">
+    <div class="scroll-down-icon absolute bottom-8 left-[50%] cursor-pointer hidden sm:block" @click="scrollToEducation">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
         class="lucide lucide-chevron-down" :class="arrowClass">

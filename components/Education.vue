@@ -48,7 +48,7 @@
                 <div class="divider lg:divider-horizontal mt-0"></div>
 
                 <div class="grid grid-cols-3 sm:grid-cols-6 gap-4">
-                
+
                   <div v-for="item in frontend" :key="item.name"
                     class="group flex flex-col items-center transition-all duration-300 hover:scale-110">
                     <img :src="item.img" :alt="item.name" class="w-10 h-10 object-contain">
@@ -151,7 +151,11 @@
                   class="flex items-center gap-2 group transition-all duration-300 hover:translate-x-2">
                   <component :is="info.icon" class="w-5 h-5" />
                   <span :class="{ 'text-gray-700': !themeStore.isDarkMode, 'text-white': themeStore.isDarkMode }">
-                    {{ languageStore.t(info.label) }} : {{ info.value }}
+                    <div class="flex gap-2 items-center">
+                      <span class="text-gray-700 text-nowrap">{{ languageStore.t(info.label) }}</span> <span
+                        class="font-bold">:</span>
+                      <p>{{ info.value }}</p>
+                    </div>
                   </span>
                 </div>
               </div>
@@ -214,11 +218,16 @@ const sectionRef = ref(null)
 const isVisible = ref(false)
 
 const observerOptions = {
-  threshold: 0.5,
+  threshold: 0.3,
   rootMargin: '50px'
 }
 
 onMounted(() => {
+  if (window.innerWidth <= 640) { // ตรวจสอบขนาดหน้าจอ (640px คือตัวแบ่งของ sm)
+    isVisible.value = true; // ปิด animation บนมือถือ
+    return;
+  }
+
   const observer = new IntersectionObserver(([entry]) => {
     isVisible.value = entry.isIntersecting;
   }, observerOptions);
